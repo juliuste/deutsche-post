@@ -20,7 +20,7 @@ npm install --save deutsche-post
 const post = require('deutsche-post')
 ```
 
-- [`municipalities(postalCode)`](#municipalitiespostalCode) to get municipalities (and subsidiary districts) for a given postal code
+- [`municipalities(postalCode)`](#municipalitiespostalcode) to get municipalities (and subsidiary districts) for a given postal code
 - `postalCode(address)` to get the postal code associated with an address ***(not yet implemented)***
 
 ### `municipalities(postalCode)`
