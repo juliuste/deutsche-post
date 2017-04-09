@@ -60,7 +60,7 @@ post.municipalities('14057').then(…)
 		'postal-code': '14057',
 		municipality: 'Berlin',
 		district: 'Charlottenburg'
-    },
+	},
 	{
 		'postal-code': '14057',
 		municipality: 'Berlin',
