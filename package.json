@@ -31,6 +31,7 @@
     "rename-key": "^1.1.1"
   },
   "devDependencies": {
+    "geojsonhint": "^2.0.0",
     "tape": "^4.6.3"
   },
   "scripts": {
