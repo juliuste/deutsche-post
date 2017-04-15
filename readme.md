@@ -21,6 +21,7 @@ const post = require('deutsche-post')
 ```
 
 - [`municipalities(postalCode)`](#municipalitiespostalcode) to get municipalities (and subsidiary districts) for a given postal code
+- [`postalCodeShapes(postalCode)`](#postalcodeshapespostalcode) to get [GeoJSON](http://geojson.org) for a given postal code
 - `postalCode(address)` to get the postal code associated with an address ***(not yet implemented)***
 
 ### `municipalities(postalCode)`
@@ -67,6 +68,63 @@ post.municipalities('14057').then(…)
 		district: 'Westend'
 	}
 ]
+```
+
+### `postalCodeShapes(postalCode)`
+
+`postalCode` must be a valid german postal code, as a number like `10969` or a [ECQL query string](http://docs.geoserver.org/latest/en/user/tutorials/cql/cql_tutorial.html#cql-tutorial) like `strToLowerCase(code) like '109%'`. Returns a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/promise).
+
+```js
+post.postalCodeShapes(10969)
+.then(console.log, console.error)
+```
+```js
+{
+	type: 'FeatureCollection',
+	totalFeatures: 1,
+	features: [
+		{
+			type: 'Feature',
+			id: 'plz_5_2015_q1.10969',
+			geometry: {
+				type: 'MultiPolygon',
+				coordinates: [
+					[
+						[
+							[
+								1492252.1342981446,
+								6892564.0134655805
+							],
+							// …
+						]
+					]
+				]
+			},
+			geometry_name: 'geom',
+			properties: {
+				code: '10969',
+				bbox: [
+					1490093.6493716629,
+					6890288.36667783,
+					1493380.8026152975,
+					6892734.658075832
+				]
+			}
+		}
+	],
+	crs: {
+		type: 'name',
+		properties: {
+			name: 'urn:ogc:def:crs:EPSG::3857'
+		}
+	},
+	bbox: [
+		1490093.6493716629,
+		6890288.36667783,
+		1493380.8026152975,
+		6892734.658075832
+	]
+}
 ```
 
 ## Contributing
