@@ -1,5 +1,7 @@
 # deutsche-post
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/deutsche-post.svg)](https://greenkeeper.io/)
+
 [German post office](https://www.deutschepost.de) postal code utilities.
 
 [![npm version](https://img.shields.io/npm/v/deutsche-post.svg)](https://www.npmjs.com/package/deutsche-post)
