@@ -33,21 +33,21 @@ post.municipalities('04936').then(…)
 ```
 ```js
 [
-	{
-		'postal-code': '04936',
-		municipality: 'Hillmersdorf',
-		'municipality-addition': ''
-	}
-	{
-		'postal-code': '04936',
-		municipality: 'Naundorf',
-		'municipality-addition': 'b Schlieben'
-	},
-	{
-		'postal-code': '04936',
-		municipality: 'Proßmarke',
-		'municipality-addition': ''
-	}
+    {
+        "postal-code": "04936",
+        "municipality-addition": "",
+        "municipality": "Hillmersdorf"
+    },
+    {
+        "postal-code": "04936",
+        "municipality-addition": "b Schlieben",
+        "municipality": "Naundorf"
+    },
+    {
+        "postal-code": "04936",
+        "municipality-addition": "",
+        "municipality": "Proßmarke"
+    }
 	// …
 ]
 ```
@@ -57,16 +57,16 @@ post.municipalities('14057').then(…)
 ```
 ```js
 [
-	{
-		'postal-code': '14057',
-		municipality: 'Berlin',
-		district: 'Charlottenburg'
-	},
-	{
-		'postal-code': '14057',
-		municipality: 'Berlin',
-		district: 'Westend'
-	}
+    {
+        "district": "Charlottenburg",
+        "postal-code": "14057",
+        "municipality": "Berlin"
+    },
+    {
+        "district": "Westend",
+        "postal-code": "14057",
+        "municipality": "Berlin"
+    }
 ]
 ```
 
@@ -75,55 +75,63 @@ post.municipalities('14057').then(…)
 `postalCode` must be a valid german postal code, as a number like `10969` or a [ECQL query string](http://docs.geoserver.org/latest/en/user/tutorials/cql/cql_tutorial.html#cql-tutorial) like `strToLowerCase(code) like '109%'`. Returns a [`Promise`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/promise).
 
 ```js
-post.postalCodeShapes(10969)
+post.postalCodeShapes('10969')
 .then(console.log, console.error)
 ```
 ```js
 {
-	type: 'FeatureCollection',
-	totalFeatures: 1,
-	features: [
-		{
-			type: 'Feature',
-			id: 'plz_5_2015_q1.10969',
-			geometry: {
-				type: 'MultiPolygon',
-				coordinates: [
-					[
-						[
-							[
-								1492252.1342981446,
-								6892564.0134655805
-							],
+    "type": "FeatureCollection",
+    "totalFeatures": 1,
+    "features": [
+        {
+            "type": "Feature",
+            "id": "plz_5_2015_q1.10969",
+            "geometry": {
+                "type": "MultiPolygon",
+                "coordinates": [
+                    [
+                        [
+                            [
+                                13.405129,
+                                52.508324
+                            ],
+                            [
+                                13.405416,
+                                52.508295
+                            ],
+                            [
+                                13.407717,
+                                52.506733
+                            ]
 							// …
-						]
-					]
-				]
-			},
-			geometry_name: 'geom',
-			properties: {
-				code: '10969',
-				bbox: [
-					1490093.6493716629,
-					6890288.36667783,
-					1493380.8026152975,
-					6892734.658075832
-				]
-			}
-		}
-	],
-	crs: {
-		type: 'name',
-		properties: {
-			name: 'urn:ogc:def:crs:EPSG::3857'
-		}
-	},
-	bbox: [
-		1490093.6493716629,
-		6890288.36667783,
-		1493380.8026152975,
-		6892734.658075832
-	]
+                        ]
+                    ]
+                ]
+            },
+            "geometry_name": "geom",
+            "properties": {
+                "code": "10969",
+                "bbox": [
+                    13.385739,
+                    52.49588,
+                    13.415268,
+                    52.509257
+                ]
+            }
+        }
+    ],
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:EPSG::4326"
+        }
+    },
+    "bbox": [
+        52.49588,
+        13.385739,
+        52.509257,
+        13.415268
+    ]
 }
 ```
 
