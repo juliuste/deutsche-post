@@ -4,9 +4,10 @@
 
 [![npm version](https://img.shields.io/npm/v/deutsche-post.svg)](https://www.npmjs.com/package/deutsche-post)
 [![Build Status](https://travis-ci.org/juliuste/deutsche-post.svg?branch=master)](https://travis-ci.org/juliuste/deutsche-post)
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/deutsche-post.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/juliuste/deutsche-post.svg)](https://david-dm.org/juliuste/deutsche-post)
-[![dev dependency status](https://img.shields.io/david/dev/juliuste/deutsche-post.svg)](https://david-dm.org/juliuste/deutsche-post#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/deutsche-post.svg?style=flat)](LICENSE)
+[![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
 ## Installation
 
