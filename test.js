@@ -1,18 +1,19 @@
 'use strict'
 
 const tape = require('tape')
-const {hint} = require('geojsonhint/lib/object')
+const {hint} = require('@mapbox/geojsonhint/lib/object')
 
 const post = require('.')
 
 tape('deutsche-post.municipalities', (t) => {
 	post.municipalities('14057').then((m) => {
-		t.plan(4)
 		t.ok(m.length>0, 'municipalities count')
 		t.ok(m[0].municipality==='Berlin', 'municipality municipality')
 		t.ok(m[0].district==='Charlottenburg', 'municipality discrict')
 		t.ok(m[0]['postal-code']==='14057', 'municipality postal-code')
-	}, t.ifError)
+		t.end()
+	})
+	.catch(t.ifError)
 })
 
 tape('deutsche-post.postalCodeShape', (t) => {
@@ -24,5 +25,6 @@ tape('deutsche-post.postalCodeShape', (t) => {
 		t.equal(data.type, 'FeatureCollection')
 
 		t.end()
-	}, t.ifError)
+	})
+	.catch(t.ifError)
 })

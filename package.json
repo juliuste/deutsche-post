@@ -14,32 +14,32 @@
     "postleitzahl",
     "municipality"
   ],
-  "author": "Julius Tens <mail@juliustens.de>",
+  "author": "Julius Tens <mail@juliustens.eu>",
   "homepage": "https://github.com/juliuste/deutsche-post",
   "repository": "juliuste/deutsche-post",
   "bugs": "https://github.com/juliuste/deutsche-post/issues",
-  "main": "index.js",
+  "main": "./index.js",
   "files": [
     "index.js",
     "lib/*"
   ],
   "dependencies": {
-    "boom": "^6.0.0",
-    "got": "^7.1.0",
+    "boom": "^7.2.0",
+    "got": "^8.3.0",
     "isnumeric": "^0.3.2",
     "lodash.omit": "^4.5.0",
     "rename-key": "^1.1.1"
   },
   "devDependencies": {
-    "geojsonhint": "^2.0.0",
-    "tape": "^4.6.3"
+    "@mapbox/geojsonhint": "^2.1.0",
+    "tape": "^4.9.0"
   },
   "scripts": {
     "test": "node test.js",
-    "prepublish": "npm test"
+    "prepare": "npm test"
   },
   "engines": {
-    "node": ">=6"
+    "node": ">=7.6"
   },
   "license": "ISC"
 }
