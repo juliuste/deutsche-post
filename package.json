@@ -25,7 +25,7 @@
   ],
   "dependencies": {
     "boom": "^7.2.0",
-    "got": "^9.0.0",
+    "got": "^10.5.6",
     "isnumeric": "^0.3.2",
     "lodash.omit": "^4.5.0",
     "rename-key": "^1.1.1"
