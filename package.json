@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@mapbox/geojsonhint": "^2.1.0",
-    "tape": "^4.9.0"
+    "tape": "^5.0.1"
   },
   "scripts": {
     "test": "node test.js",
